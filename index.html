@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Melt, PHP web application framework for lean startup projects</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="melt framework, melt, meltphp, melt php, php framework, web app, web application, app development, coding, melt software, php framework" />
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="1.3.0/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script>$(function () { prettyPrint() })</script>
+    <script src="1.3.0/bootstrap-dropdown.js"></script>
+    <script src="1.3.0/bootstrap-twipsy.js"></script>
+    <script src="1.3.0/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/application.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/ico/bootstrap-apple-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/bootstrap-apple-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/bootstrap-apple-114x114.png">
+  </head>
+
+  <body>
+
+    <!-- Topbar
+    ================================================== -->
+    <div class="topbar" >
+      <div class="topbar-inner">
+        <div class="container">
+          <a class="brand" href="#"><img src="assets/img/melt-logo.png"/></a>
+          <ul class="nav">
+            <li class="active"><a href="#overview">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#company">Company</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masthead (blueprinty thing)
+    ================================================== -->
+    <header class="jumbotron masthead" id="overview">
+      <div class="inner">
+        <div class="container">
+          <h1>Melt, the lean startup engine</h1>
+          <p class="lead">
+            Melt is a PHP web application framework for rapid software development in lean startups.<br/>
+            <!--             For lean startups, it is the shortest way to a minimum viable product. -->
+            Seasoned developers use Melt to write less code, pivot faster and scale their product to the masses.
+          </p>
+          <p><strong>Lean Startup:</strong> A waste-minimizing organism that uses customer-centric rapid iterations to quickly build viable products and services.</p>
+          	
+          <div style="margin: 0 auto;text-align: center;width:600px;">
+          <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	<fb:like href="facebook.com/pages/Melt-Framework/232843960089743" send="false" layout="button_count" width="80" show_faces="false" font=""></fb:like>
+	
+	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="meltframework" data-lang="en">Tweet</a>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<g:plusone size="small" href="http://meltframework.org"></g:plusone>
+          </div>
+        
+        </div><!-- /container -->
+      </div>
+    </header>
+
+    <!-- Quickstart options
+    ================================================== -->
+    <div class="quickstart">
+      <div class="container">
+        <div class="row">
+ 
+          <div class="span5">
+            <h6>Download Melt</h6>
+            <p>Download the latest Melt release,
+                open-source and free for all your commercial projects.</p>
+            <p><a target="_blank" href="https://github.com/melt/melt/zipball/1.4" class="btn primary">Download Melt v1.4.0</a></p>
+            <p class="current-version"><a title="Read the Melt License Agreement" href="https://github.com/melt/melt/blob/master/LICENSE.md" target="_blank">BSD License</a> - <a title="View the GitHub repo" href="https://github.com/melt/melt/" target="_blank">GitHub Repo</a></p>
+          </div>
+           <div class="span5">
+            <h6>Get Started</h6>
+            <p>Unzip and run Melt on your web server to start building your product in minutes.</p>
+
+            <p class="current-version"><a title="Read the Quick Start Guide" href="https://github.com/melt/melt/wiki/Getting-Started-with-Melt" target="_blank">Getting Started Guide</a></p>
+          </div>
+          <div class="span5">
+            <h6>Build - Scrap - Rework</h6>
+            <p>Melt agressively avoids code duplication to make pivoting and reworking your product joyful.</p>
+            <div style="margin:0 auto;text-align:center;"><img title="Build-Measure-Learn" src="assets/img/build-measure-learn.png"/></div>
+          </div>
+        </div><!-- /row -->
+      </div>
+    </div>
+
+    <div class="container">
+
+
+
+
+
+<!-- About Melt
+================================================== -->
+<section id="about">
+  <div class="page-header">
+    <h1>About Melt <small>Brief history, prerequisites, and getting started</small></h1>
+  </div>
+  <div class="row">
+    <div class="span-one-third">
+      <h3>History</h3>
+      <p>Developers at Melt have historically used a variety of web application frameworks,
+         each with its own set of substandards and automagic behavior.
+         In the perfect world of CRUD these make programming child's play
+         but in reality substandards create obscurity and automagic behavior promote ugly hacks.
+         Melt is an answer to this problem, a highly flexible and simple-to-use PHP web application framework based entirely on standards.
+      </p>
+      <p>
+        <a href="http://twitter.com/meltframework" class="twitter-follow-button">Follow @meltframework</a>
+        <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+      </p>
+    </div>
+    <div class="span-one-third">
+      <h3>Prerequisites</h3>
+      <p>Melt runs on common web servers such as Apache, nginx and lighthttpd.</p>
+      <img src="assets/img/servers.png" alt="Melt runs on common web servers such as Apache, nginx and lighthttpd">
+      <ul>
+        <li>Apache, nginx or lighthttpd</li>
+        <li>MySQL 5.1.5 or above</li>
+        <li>PHP 5.3.5 or above</li>
+      </ul>
+    </div>
+    <div class="span-one-third">
+      <h3>Getting started</h3>
+      <p>Melt gets you started with programming and reading source code right away.</p>
+      <ul>
+        <li>Download Melt</li>  
+        <li>Unzip the folder on your web server</li>
+        <li>Visit the url to run the bootstrapping script</li>
+        <li>Run <code>install</code> in the unix-like browser console</li>
+        <li>Optionally run <code>ghd deploy-sample-app</code></li>
+        <li>DONE!</li>
+      </ul>
+    </div>
+  </div><!-- /row -->
+  
+  <blockquote>
+        <p>Bring the cold, cold water, from the dark, dark well, to the warm hearth fire, when the ice begins to melt.</p>
+        <small>Emilio Miller-Lopez</small>
+      </blockquote>
+</section>
+
+
+
+
+
+
+<!-- Features
+================================================== -->
+<section id="features">
+  <div class="page-header">
+    <h1>Features <small>MVC Design Pattern, Modular, SQL, AJAX, Caching and more</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <dl>
+        <dt>MVC Design Pattern</dt>
+        <dd>Melt uses the proven Model-View-Controller design pattern for clear separation of concerns.</dd>
+        <dt>Modular Structure</dt>
+        <dd>Melt has a modular structure which allows it to be extended without adding complexity.</dd>
+        <dt>ORM/Object-Relational Mapping</dt>
+        <dd>Melt provides Object-Relational Mapping that maps data into native PHP objects.</dd>
+        <dt>Third-Party Friendly</dt>
+        <dd>Melt works well with third-party code and allows you to easily integrate classes.</dd>
+      </dl>
+    </div>
+    <div class="span4">
+      <dl>
+        <dt>Scaffolding</dt>
+        <dd>Melt provides application scaffolding for rapid prototyping and generating CRUD.</dd>
+        <dt>Sample Code</dt>
+        <dd>Melt allows you to deploy sample code and sample apps through the unix-like console interface.</dd>
+        <dt>Module Library</dt>
+        <dd>Melt has an ever-growing library with useful modules that increase your productivity.</dd>
+        <dt>Gettext Localization</dt>
+        <dd>Melt uses the gettext localization standard and imports translated .po-files with drag and drop.</dd>
+      </dl>
+    </div>
+    <div class="span4">
+      <dl>
+        <dt>Debugging & Profiling</dt>
+        <dd>Melt provides debugging tools and suggests fixes to help you write beautiful code.</dd>
+        <dt>Error Handling</dt>
+        <dd>Melt provides error handling and comprehensive logs to help you understand and solve problems.</dd>
+        <dt>Mail Spooling</dt>
+        <dd>Melt provides a mail spooler that stores emails in the database until they can be sent.</dd>
+        <dt>Sessions & Authentication</dt>
+        <dd>Melt provides a secure session handling component and strong authentication features. </dd>
+      </dl>
+    </div>
+    <div class="span4">
+      <dl>
+        <dt>Data Types</dt>
+        <dd>Melt provides comprehensive data types to help you quickly build data structures and input forms.</dd>
+        <dt>AJAX Integration</dt>
+        <dd>Melt is integrated with JQuery and JQuery UI to allow simple and painless AJAX handling.</dd>
+        <dt>Advanced SQL</dt>
+        <dd>Melt provides SQL table indexing and trigger support for enhanced performance and data integrity.</dd>
+        <dt>Caching Scheme</dt>
+        <dd>Melt is very fast - thanks to a small footprint and extensive usage of cache and loading techniques.</dd>
+      </dl>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+
+
+
+<!-- Grid system
+================================================== -->
+<section id="company">
+  <div class="page-header">
+    <h1>The Company <small>Welcome to Melt Software AB, Sweden</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+       <img src="assets/img/melt-software-ab.png" title="Office of Melt Software AB" />
+       <address>
+            <strong>Melt Software AB</strong>
+            <br>
+            Teknikringen 7
+            <br>
+            Linköping, SWEDEN
+            <br>
+            <abbr title="Phone">P:</abbr>
+            +46 8 6414 000
+            <br>
+            <abbr title="Email">E:</abbr>
+            team@meltsoftware.com
+       </address>
+        
+      
+    </div>
+      <div class="span12">
+          <div class="row">  
+              <div class="span8">
+                  <h3>About Us</h3>
+                  <p>Melt Software AB ("Melt") is a trusted partner in software development. The company was founded in 2010 and has since built custom software solutions for multinational corporations as well as SMEs. Melt works with long-term client relationships and has an independent role that enables the company to select the technical solution that best solves the client's problem. The backbone of Melt is Melt Framework, the open-source web development framework that is used by seasoned developers globally.</p>
+                  <h3>Working With Us</h3>    
+                  <p>We prefer you have a mutual acquaintance connect us. Should none such exist, you may use the contact details to the left.</p>
+              </div>
+                  
+              <div class="span4">
+                  <h3>Selected Clients</h3>
+                  <ul>
+                      <li>ABB AB</li>
+                      <li>Agricam AB</li>
+                      <li>Biototal Sweden AB</li>
+                      <li>Cepro AB</li>
+                      <li>Familjelarm Sverige AB</li>
+                      <li>Infoside Sweden AB</li>
+                      <li>KeyPlan Sweden AB</li>
+                      <li>Linköping University</li>
+                      <li>Lund University</li>
+                      <li>Lyttkens & Partners AB</li>
+                      <li>Oerlikon Solar AG</li>
+                      <li>Prohelp Bemanning AB</li>
+                      <li>Sportion Media Group AB</li>
+                      <li>We Love Students AB</li>
+                  </ul>
+              </div>
+          </div>
+              
+          <div class="row">
+              <div class="span12">
+              <h3>Our Team</h3>
+              <div class="span3">
+                  <img src="assets/img/photo-per-jonsson.jpg" />
+                  <p>Per Jonsson</p>
+              </div>
+              <div class="span3">
+                  <img src="assets/img/photo-daniel-marklund.jpg" />
+                  <p>Daniel Marklund</p>
+              </div>
+              <div class="span3">
+                  <img src="assets/img/photo-hannes-landeholm.jpg" />
+                  <p>Hannes Landeholm</p>
+              </div>
+                  
+              <div class="span3">
+                  <img src="assets/img/photo-karin-rahmqvist.jpg" />
+                  <p>Karin Rahmqvist</p>
+              </div>
+              <div class="span3">
+                  <img src="assets/img/photo-mikael-silven.jpg" />
+                  <p>Mikael Silvén<br><em>Freelance</em></p>
+              </div>
+              <div class="span3">
+                  <img src="assets/img/photo-jonatan-olofsson.jpg" />
+                  <p>Jonatan Olofsson<br><em>Freelance</em></p>
+              </div>
+          </div>
+          </div>            
+              
+              
+      </div>
+          
+          
+          
+  </div><!-- /row -->
+</section>
+
+
+
+
+    </div><!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>
+          
+          Melt Framework is licensed under a <a title="Read the Melt License Agreement" href="https://github.com/melt/melt/blob/master/LICENSE.md" target="_blank">BSD License</a> and maintained by an awesome team of contributors.<br/>
+          Design is based on <a href="https://github.com/twitter/bootstrap" target="_blank">Bootstrap</a> by Twitter.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>
+<script type="text/javascript">
+document.write('<scr' + 'ipt src="' + document.location.protocol + '//fby.s3.amazonaws.com/fby.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+FBY.showTab({id: '1215', position: 'right', color: '#0064CD'});
+</script>
